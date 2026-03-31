@@ -234,11 +234,29 @@ OTHER
 
 ---
 ## Known Issues
-- ping doesn't provide credits or highlight the option on the target details
-- ping returns same speed on host and local
 
 ---
 ## Patch Log
+
+## v5.1 — Economy Hardening
+
+- All recon bonuses (scan, nmap, gobuster, sniffer) are now strictly one-time per target and persist across saves — credits can no longer be farmed by repeating recon commands
+- Re-running a rewarded recon action prints `[*] Already rewarded — no bonus.` so the player understands why no credits were awarded
+- Ping bonus (+5c) tracks unique source→destination pairs and persists in save state
+
+### v5.2 — Terminal Authenticity and UX Fixes
+- nmap reward fixed — guard now ensures reconDone is initialised before flag check
+- IDOR discovery awards +15c per unique user ID retrieved without auth
+- Multiple toasts now stagger vertically instead of stacking on top of each other
+- Terminal tab relabelled TERMINAL with `>_` icon
+- `hostname [name]` command lets the user set their attacker machine hostname; persists in save
+- Exfil folder in FILES pane now expands to list exfiltrated files on click
+- `ls` and `cd` work on the local (attacker) machine when not connected to a target
+- Suggested attack sequence removed from network map target modal
+- Network map now uses viewBox scaling to fill 100% of the pane at any screen size
+- `walkthrough-targets.txt` split into per-target files (`walkthrough-target-1.txt` through `walkthrough-target-7.txt`); each file only reveals targets already discovered
+- New authentic Linux commands: `grep [-r -i -n]`, `find [-name]`, `id`, `uname [-a]`, `ps`, `history`, `echo`, `ifconfig`, `ip a / ip route`, `env`, `sudo`, `su`, `chmod`, `touch`, `mkdir`, `which`
+- Tab autocomplete covers all new commands
 
 ### v5.0 — Polish and Economy Fixes
 - SSH login bonus (+50c) now awarded once per target; re-awarded separately on first web portal login (+40c)
