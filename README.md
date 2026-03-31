@@ -233,7 +233,10 @@ OTHER
 | TOR Router | OPSEC | 3500c + 700 REP | No wanted gain, elite unlock |
 
 ---
+## Known Issues
+- ping doesn't provide credits or highlight the option on the target details
 
+---
 ## Patch Log
 
 ### v4.1 — Bug Fix
