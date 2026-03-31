@@ -240,6 +240,13 @@ OTHER
 ---
 ## Patch Log
 
+### v5.0 — Polish and Economy Fixes
+- SSH login bonus (+50c) now awarded once per target; re-awarded separately on first web portal login (+40c)
+- Contract completion box is now fixed-width with all text centered and equal-length top/bottom borders
+- `ping` awards +5c per unique source→destination pair; local-to-target and target-to-target pings tracked separately
+- `ping` latency is now context-aware: local-to-remote shows realistic WAN latency (~8–40ms), target-to-target shows LAN latency (~0.1–3ms)
+- Network map now fills the full pane height, scrollable on small screens, and scales node spacing and repulsion force with the number of entries
+
 ### v4.1 — Bug Fix
 - Fixed `run <script>` not resolving target filesystem scripts; `run monitor.sh` now executes scripts found in the current working directory on a connected target
 - Fixed `cat <script>.sh` showing `[Binary or unreadable file]` for target shell scripts; now displays content with a read-only notice
