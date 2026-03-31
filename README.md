@@ -238,12 +238,6 @@ OTHER
 ---
 ## Patch Log
 
-## v5.1 — Economy Hardening
-
-- All recon bonuses (scan, nmap, gobuster, sniffer) are now strictly one-time per target and persist across saves — credits can no longer be farmed by repeating recon commands
-- Re-running a rewarded recon action prints `[*] Already rewarded — no bonus.` so the player understands why no credits were awarded
-- Ping bonus (+5c) tracks unique source→destination pairs and persists in save state
-
 ### v5.2 — Terminal Authenticity and UX Fixes
 - nmap reward fixed — guard now ensures reconDone is initialised before flag check
 - IDOR discovery awards +15c per unique user ID retrieved without auth
@@ -257,6 +251,12 @@ OTHER
 - `walkthrough-targets.txt` split into per-target files (`walkthrough-target-1.txt` through `walkthrough-target-7.txt`); each file only reveals targets already discovered
 - New authentic Linux commands: `grep [-r -i -n]`, `find [-name]`, `id`, `uname [-a]`, `ps`, `history`, `echo`, `ifconfig`, `ip a / ip route`, `env`, `sudo`, `su`, `chmod`, `touch`, `mkdir`, `which`
 - Tab autocomplete covers all new commands
+
+## v5.1 — Economy Hardening
+
+- All recon bonuses (scan, nmap, gobuster, sniffer) are now strictly one-time per target and persist across saves — credits can no longer be farmed by repeating recon commands
+- Re-running a rewarded recon action prints `[*] Already rewarded — no bonus.` so the player understands why no credits were awarded
+- Ping bonus (+5c) tracks unique source→destination pairs and persists in save state
 
 ### v5.0 — Polish and Economy Fixes
 - SSH login bonus (+50c) now awarded once per target; re-awarded separately on first web portal login (+40c)
