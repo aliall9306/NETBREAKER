@@ -235,6 +235,7 @@ OTHER
 ---
 ## Known Issues
 - ping doesn't provide credits or highlight the option on the target details
+- ping returns same speed on host and local
 
 ---
 ## Patch Log
