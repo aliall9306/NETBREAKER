@@ -238,6 +238,17 @@ OTHER
 ---
 ## Patch Log
 
+### v5.3 — Theme, Map, and Walkthrough Overhaul
+- Light theme now correctly swaps background (#f0f4f0) and text (#1a2a1a) — all base CSS
+  elements use `var(--bg)` and `var(--textd)` so the toggle affects every pane
+- Network map uses `ResizeObserver` and absolute SVG positioning to fill the full pane
+  at any screen size; re-renders automatically on window resize
+- `walkthrough-targets.txt` removed; replaced by 7 individual files
+  (`walkthrough-target-1.txt` through `walkthrough-target-7.txt`), each gated behind
+  target discovery — locked targets return a REP requirement message
+- `walkthrough.txt` index updated to list per-target files with difficulty and REP
+- Version strings updated to 5.3 in splash screen and boot message
+
 ### v5.2 — Terminal Authenticity and UX Fixes
 - nmap reward fixed — guard now ensures reconDone is initialised before flag check
 - IDOR discovery awards +15c per unique user ID retrieved without auth
