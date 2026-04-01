@@ -293,6 +293,22 @@ OTHER
 ---
 ## Patch Log
 
+### v5.5 — Terminal Sessions, Settings Panel, and Mechanic Fixes
+- Three independent terminal sessions (T1/T2/T3) via sub-tab row inside the terminal
+  pane — each has its own connection, history, and output; switching syncs the Files pane;
+  sub-tabs only visible when terminal is active; T1 highlighted by default
+- Settings cog (⚙) on topbar — houses theme toggle, font size (A-/A+, 10–16px),
+  fullscreen toggle, and Quit Session; Shop remains separate
+- `kill <type> <ip>` terminates deployed agents; `agents` shows kill hint per entry
+- `cd exfil` and `cd scripts` now work on the local shell — list contents inline
+- `cd .` no longer errors
+- Exploit shell rewards one-time per vulnerability key — re-exploiting returns the shell
+  but not the credit bonus
+- `persist` now requires Persistence Kit from shop (700c)
+- `clearlogs` applies atomically to connected target; 60s cooldown per target; remote
+  wipe still requires Log Cleaner tool
+- v5.4 saves load without migration — existing session hydrated into T1
+
 ### v5.4 — Map Overhaul and Cross-Platform Save Fix
 - **Save system** — IndexedDB now wrapped in `try/catch` with `localStorage` fallback;
   fixes silent crash on Chromium/Debian Chromium when the file path contains `[` or `]`
